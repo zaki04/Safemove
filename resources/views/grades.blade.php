@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Area Rating</title>
+    <title>Grades</title>
   </head>
 
   <body>
 
-    <h1>Area Rating</h1>
+    <h1>Grades</h1>
 
     <ul>
 
-      @foreach ($user_rating as $rating)
+      @foreach ($grades as $grade)
 
-        <li>{{ $rating->street_name }}</li>
+        <li>{{ $grade->street_name }}</li>
 
       @endforeach
 

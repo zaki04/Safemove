@@ -11,6 +11,9 @@
 |
 */
 
+use App\Grade;
+
+
 Route::get('/', function () {
   return view('index');
 });
@@ -23,21 +26,20 @@ Route::get('/about', function () {
 
 
 
-Route::get('/area_rating', function () {
 
-  $user_rating = DB::table('user_rating')->get();
+Route::get('/grades', function () {
 
-  return view('area_rating', compact('user_rating'));
+  $grades = Grade::all();
+
+  return view('grades', compact('grades'));
 
 });
 
 
+Route::get('/grades/{grade}', function ($id) {
 
-Route::get('/user_rating/{rating}', function ($id) {
+  $grade = Grade::find($id);
 
-  $rating = DB::table('user_rating')->find($id);
-  dd($rating);
-
-  return view('area_rating', compact('user_rating'));
+  return $grade;
 
 });
