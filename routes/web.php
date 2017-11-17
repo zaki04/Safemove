@@ -11,35 +11,11 @@
 |
 */
 
-use App\Grade;
-
-
 Route::get('/', function () {
-  return view('index');
-});
 
+    return view('index');
+  });
 
-Route::get('/about', function () {
-  return view('about');
-});
+Route::get('/grades', 'GradesController@index');
 
-
-
-
-
-Route::get('/grades', function () {
-
-  $grades = Grade::all();
-
-  return view('grades', compact('grades'));
-
-});
-
-
-Route::get('/grades/{grade}', function ($id) {
-
-  $grade = Grade::find($id);
-
-  return $grade;
-
-});
+Route::get('/grades/{grade}', 'GradesController@show');

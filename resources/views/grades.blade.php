@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Grades</title>
-  </head>
+@extends ('layouts.master')
 
-  <body>
+
+@section ('title')
+
+Grades
+
+@endsection
+
+
+@section ('content')
 
     <h1>Grades</h1>
 
     <ul>
 
       @foreach ($grades as $grade)
-
         <li>{{ $grade->street_name }}</li>
-
       @endforeach
 
     </ul>
 
-  </body>
-
-</html>
+@endsection
