@@ -16,6 +16,8 @@ Route::get('/', function () {
     return view('index');
   });
 
-Route::get('/grades', 'GradesController@index');
+Route::get('/grading', 'GradesController@grading');
+
+Route::get('/grades', 'GradesController@grades');
 
 Route::get('/grades/{grade}', 'GradesController@show');
