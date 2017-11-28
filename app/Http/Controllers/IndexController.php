@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Grade;
+use Illuminate\Http\Request;
 
-class GradesController extends Controller
+class IndexController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class GradesController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**
@@ -23,7 +23,7 @@ class GradesController extends Controller
      */
     public function create()
     {
-        return view('grading');
+        //
     }
 
     /**
@@ -32,15 +32,9 @@ class GradesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Grade $request)
+    public function store(Request $request)
     {
-      Grade::create([
-        'parameter1' => request('group1'),
-        'parameter2' => request('group2'),
-        'parameter3' => request('group3')
-      ]);
-
-      return redirect('/');
+        //
     }
 
     /**
@@ -49,12 +43,9 @@ class GradesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Grade $id)
+    public function show($id)
     {
-
-      $grades = Grade::all();
-
-      return view('grades', compact('grades'));
+        //
     }
 
     /**

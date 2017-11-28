@@ -8,19 +8,9 @@
   </head>
   <body>
 
-    <div class="header">
-
       @yield ('header')
 
-    </div>
-
-    <div class="container">
-
       @yield ('content')
-
-    </div>
-
-    <div class="footer">
 
       @yield ('footer')
 
